@@ -1,0 +1,149 @@
+body{
+	margin:0;
+	padding:0;
+	background:#fff;
+	overflow-x:hidden;
+	font-family:"Josefin" !important;
+
+}
+
+*{
+	font-family:"Poppins" !important;
+}
+.navbar{
+
+}
+.navbar, .navbar-default{
+	margin:0;
+	border:0;
+	background:inherit;
+	
+
+	}
+
+.navbar-brand{
+	color:#eb6e80 !important;
+	font-weight:bold;
+
+}
+
+#load{
+	width:50px;
+}
+
+#movies img, #movie img{
+	width:100%;
+
+}
+
+.well{
+	background-color:inherit;
+	border-color:;
+	box-shadow:1px 1px 6px #eb6e80;
+
+}
+
+#card {
+	
+}
+
+.btn-primary{
+	background-color:inherit;
+	border:2px solid #eb6e80;
+	color:black;
+}
+
+.btn-primary:hover{
+	background-color:#eb6e80;
+	border:2px solid #eb6e80;
+}
+
+
+#plot p{
+   background-color:;
+   text-align:left;
+}
+
+#plot {
+   
+   padding:2%;
+
+}
+
+.pops{
+	padding:6%;
+	margin:2%;
+}
+
+
+#btnCtrl{
+	margin:2%;
+}
+
+#next{
+	float:right;
+}
+
+
+#previous{
+	float:left;
+}
+
+.item img{
+	width:100%;
+}
+.item {
+	width:100%;
+	height:400px;
+}
+
+ li{
+    margin-right:2% !important;
+}
+
+.direction{
+	width:50px;
+
+	margin-top:200px;
+}
+
+
+
+
+.pimg2{
+	position:relative;
+	opacity:0.70;
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat no-repeat;
+
+	background-attachment:fixed;
+}
+
+.pimg2{
+	background-image:url('../img/img1.jpg');
+	min-height:400px;
+	margin-top:10px;
+}
+
+.ptext{
+	position:absolute;
+	top:50%;
+	width:100%;
+	text-align:center;
+	color:#000;
+	font-size:27px;
+	letter-spacing:8px;
+	text-transform:uppercase;
+	
+}
+
+.ptext .border{
+	background-color:#111;
+	color:#fff;
+	padding:20px;
+}
+
+.ptext .border.trans{
+	background-color:transparent;
+}

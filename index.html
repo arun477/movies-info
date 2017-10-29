@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>MovieInfo</title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
+
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Poppins|Roboto" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <script src="https://use.fontawesome.com/8bf6e08862.js"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+        	<div class="navbar-header">
+        		<a class="navbar-brand" href="index.html">Movies Info</a>
+        	</div>
+
+        </div>
+    </nav>
+
+
+<div style="margin-bottom:3%;margin-top:3%" class="container-fluid">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div style="color:#eb6e80" class="carousel-inner">
+
+      <div class="item active">
+        <img id="01" src="img/img1.jpg" alt="Los Angeles" style="width:100%;">
+        <div style="background-color:black;opacity:0.8" class="carousel-caption">
+          <h3 style="color:#eb6e80">Enjoy Your Movies</h3>
+          <p style="color:#eb6e80">Here you find all the movies info</p>
+        </div>
+      </div>
+
+      
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="">
+      	<img class="direction" src="img/left.svg"/>
+      </span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="">
+      	<img class="direction" src="img/right.svg"/>
+      </span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container" style="margin-bottom:3%">
+    	<div >
+    		
+    		
+    		<form id="searchForm" >
+    		   <div class="row">
+                  <div class="col-md-8 col-sm-8">
+    			<input style="margin-bottom:2%" type="text" id="searchText" class="form-control" placeholder="Search your movies........">
+    			</div>
+    			 <div class="col-md-4 col-sm-4">
+    			<input class="btn btn-primary " type="submit" placeholder="search" style="">
+    			<img id="load" src="img/loadingIcon.svg" />
+    			</div>
+    			</div>
+    		</form>
+    		
+    	</div>
+    </div>
+
+    <div class="container">
+    <div>
+    	<div id="movies" class="row"></div>
+    	</div>
+    	<div id='btnCtrl' class="row"></div>
+    </div>
+
+
+     <footer style="margin:0">
+    	<div style="margin:0" class="container-fluid">
+    		<div class="pimg2">
+  	<div class="ptext">
+  		<span class="border ">
+  		    ENJOY ! !
+  		</span>
+  	</div>
+  </div>
+    	</div>
+    </footer>
+
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+
+  <script type="text/javascript" src="js/main.js"></script>
+  
+
+</body>
+</html>

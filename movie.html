@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MovieInfo</title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Poppins|Roboto" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Movies Info</a>
+          </div>
+
+        </div>
+    </nav>
+
+   <!--  <div class="container" style="margin-bottom:3%">
+      <div >
+        
+        
+        <form id="searchForm" >
+           <div class="row">
+                  <div class="col-md-8 col-sm-8">
+          <input style="margin-bottom:2%" type="text" id="searchText" class="form-control" placeholder="Search your movies........">
+          </div>
+           <div class="col-md-4 col-sm-4">
+          <input class="btn btn-primary " type="submit" placeholder="search" style="">
+          <img id="load" src="img/loadingIcon.svg" />
+          </div>
+          </div>
+        </form>
+        
+      </div>
+    </div> -->
+
+    <div id="viewbox" class="container">
+    <div>
+      <div id="movie" class="row"></div>
+      <!-- <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+
+</video>
+      </div>
+      </div> -->
+      </div>
+    </div>
+
+    
+     <footer style="margin:0">
+      <div style="margin:0" class="container-fluid">
+        <div class="pimg2">
+    <div class="ptext">
+      <span class="border ">
+          ENJOY ! !
+      </span>
+    </div>
+  </div>
+      </div>
+    </footer>
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+
+  <script type="text/javascript" src="js/main.js"></script>
+  <script>
+   
+    getMovie();
+
+
+    function getMovie(){
+  let movieId = sessionStorage.moveId;
+  console.log(movieId)
+  axios.get("http://www.theimdbapi.org/api/movie?movie_id="+movieId)
+  .then((response)=>{
+    console.log(response);
+    let movie = response.data;
+    let output = `
+     <div class="col-md-12 col-sm-12">
+              <div class="well text-center pops">
+              <div class='row'>
+
+               <div class="col-md-4 col-sm-4">
+                <img style="display:block" src=${movie.poster.large} >
+               </div>
+               
+               <div class="col-md-8 col-sm-8">
+                <h3 style="color:#eb6e80">${movie.title}</h3>
+                 <ul class="list-group">
+
+                   <li class="list-group-item"><strong>Genre :  </strong> ${movie.genre.join(",")}</li>
+                   <li class="list-group-item"><strong>Released :  </strong> ${movie.release_date}</li>
+                   <li class="list-group-item"><strong>IMDB Rating :  </strong> ${movie.rating}</li>
+                   <li class="list-group-item"><strong>Director :  </strong> ${movie.director}</li>
+                   <li class="list-group-item"><strong>Writers :  </strong> ${movie.writers.join(",")}</li>
+                   <li class="list-group-item"><strong>Languages :  </strong> ${movie.metadata.languages.join(',')}</li>
+                   <li class="list-group-item"><strong>Cast :  </strong> ${movie.stars.join(',')}</li>
+                   <li class="list-group-item"><strong>Content Rating :  </strong> ${movie.content_rating}</li>
+
+                 </ul>
+
+                 <div id='plot'>
+                      <p><strong>Story Line :</strong> ${movie.storyline} .  . .  .  .  .  .  </p>
+                 </div>
+
+                 <a id="backtoresult" href="Javascript:void(0)" class="btn btn-primary"> BacK to results</a>
+                
+                </div>
+
+              </div>
+              </div>
+           </div>
+    `
+
+   $('#movie').html(output);
+
+   $('#backtoresult').click(function(){
+            window.location = 'index.html';
+   })
+
+
+
+   window.sr= ScrollReveal({reset:true});
+  sr.reveal('.pops',{
+   duration: 1500,
+     origin: 'right',
+      viewFactor:0.4
+  });
+
+
+
+  })
+    .catch((err)=>{
+      console.log(err);
+    })
+
+ }
+
+/*
+ axios.get("http://www.theimdbapi.org/api/find/movie?title=action")
+ .then((response)=>{
+  console.log("==============================")
+  console.log(response);
+  console.log("==============================")
+ })*/
+
+  </script>
+</body>
+</html>
