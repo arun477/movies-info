@@ -54,7 +54,7 @@ $(document).ready(()=>{
 	});
 
    function getMovies(searchText){
-   	axios.get("http://www.omdbapi.com/?apikey=thewdb&s="+searchText+"&page="+pageNo)
+   	axios.get("https://www.omdbapi.com/?apikey=thewdb&s="+searchText+"&page="+pageNo)
    	.then((response)=>{
        console.log(response);
        let Resp = response.data.Response;
