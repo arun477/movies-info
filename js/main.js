@@ -3,7 +3,7 @@ $(document).ready(()=>{
      let pageNo = 1;
 
      // carousel load
-     axios.get("http://www.theimdbapi.org/api/find/movie?title=new&year=2017")
+     axios.get("https://www.theimdbapi.org/api/find/movie?title=new&year=2017")
      .then((response)=>{
      	console.log(response);
      	let latestMovies = response.data
