@@ -8,6 +8,8 @@ $(document).ready(()=>{
      	console.log(response);
      	let latestMovies = response.data
      	let count =1;
+
+   
      	latestMovies.forEach((movie)=>{
      		
      		if(count<=5){
@@ -158,7 +160,7 @@ $(document).ready(()=>{
 	sr.reveal('.pops',{
 	 duration: 1500,
      origin: 'right',
-      viewFactor:0.4
+      viewFactor:0.2
 	});
    	})
    	.catch((err)=>{
